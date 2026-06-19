@@ -132,54 +132,77 @@ export default function HomePage() {
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-        <Image
-          src="/photos/hero.webp"
-          alt="Daniel Michael Gabriel"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={90}
-        />
-        <div className="hero-overlay absolute inset-0" />
-
-        {/* Stars / particles overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e]/40 via-transparent to-[#0a0f1e]/80" />
+      <section id="top" className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0f1e]">
+        {/* Subtle background gradient / glow */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[60%] h-full bg-gradient-to-l from-[#c8102e]/10 via-[#f5b731]/5 to-transparent" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#f5b731]/5 rounded-full blur-3xl" />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-[#c8102e]/80 border border-red-500/30 text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase mb-6 animate-fade-in">
-              ★ Republican · District 46 · Hawaii
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left — text */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-[#c8102e]/80 border border-red-500/30 text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase mb-6 animate-fade-in">
+                ★ Republican · District 46 · Hawaii
+              </div>
+
+              <h1 className="font-serif text-6xl sm:text-7xl lg:text-8xl font-bold leading-tight mb-4 animate-fade-up">
+                Daniel
+                <br />
+                <span className="gold-gradient">Michael</span>
+                <br />
+                Gabriel
+              </h1>
+
+              <p className="text-xl sm:text-2xl text-gray-200 font-light mb-3 animate-fade-up delay-100">
+                State Representative · District 46
+              </p>
+
+              <div className="w-16 h-1 bg-[#f5b731] rounded mb-6 animate-fade-up delay-200" />
+
+              <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-xl animate-fade-up delay-300">
+                Born and raised in Wahiawa. Husband, father, and community leader fighting to return government to the people — with lower taxes, cleaner streets, and real accountability.
+              </p>
+
+              <div className="flex flex-wrap gap-4 animate-fade-up delay-400">
+                <a href="#donate"
+                  className="flex items-center gap-2 bg-[#c8102e] hover:bg-red-600 text-white font-bold px-8 py-4 rounded-xl text-lg transition shadow-2xl shadow-red-900/40 hover:shadow-red-600/30">
+                  Donate to the Campaign <ArrowRight className="w-5 h-5" />
+                </a>
+                <a href="#volunteer"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition backdrop-blur-sm">
+                  Get Involved
+                </a>
+              </div>
             </div>
 
-            <h1 className="font-serif text-6xl sm:text-7xl lg:text-8xl font-bold leading-tight mb-4 animate-fade-up">
-              Daniel
-              <br />
-              <span className="gold-gradient">Michael</span>
-              <br />
-              Gabriel
-            </h1>
-
-            <p className="text-xl sm:text-2xl text-gray-200 font-light mb-3 animate-fade-up delay-100">
-              State Representative · District 46
-            </p>
-
-            <div className="w-16 h-1 bg-[#f5b731] rounded mb-6 animate-fade-up delay-200" />
-
-            <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-xl animate-fade-up delay-300">
-              Born and raised in Wahiawa. Husband, father, and community leader fighting to return government to the people — with lower taxes, cleaner streets, and real accountability.
-            </p>
-
-            <div className="flex flex-wrap gap-4 animate-fade-up delay-400">
-              <a href="#donate"
-                className="flex items-center gap-2 bg-[#c8102e] hover:bg-red-600 text-white font-bold px-8 py-4 rounded-xl text-lg transition shadow-2xl shadow-red-900/40 hover:shadow-red-600/30">
-                Donate to the Campaign <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="#volunteer"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition backdrop-blur-sm">
-                Get Involved
-              </a>
+            {/* Right — Daniel's photo */}
+            <div className="flex justify-center lg:justify-end animate-fade-in delay-200">
+              <div className="relative">
+                {/* Glow ring behind photo */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#f5b731]/30 via-[#c8102e]/20 to-transparent rounded-3xl blur-2xl" />
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 max-w-md w-full">
+                  <Image
+                    src="/photos/hero.webp"
+                    alt="Daniel Michael Gabriel"
+                    width={600}
+                    height={750}
+                    className="object-cover object-top w-full"
+                    priority
+                    quality={90}
+                  />
+                  {/* Subtle name badge at bottom of photo */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0f1e]/80 to-transparent px-5 py-4">
+                    <p className="text-white font-bold text-sm tracking-wide">Daniel Michael Gabriel</p>
+                    <p className="text-[#f5b731] text-xs">Republican · District 46</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
