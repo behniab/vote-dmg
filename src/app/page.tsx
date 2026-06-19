@@ -134,7 +134,7 @@ export default function HomePage() {
       {/* ─── HERO ─── */}
       <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
         <Image
-          src="/photos/hero.jpg"
+          src="/photos/hero.webp"
           alt="Daniel Michael Gabriel"
           fill
           className="object-cover object-center"
@@ -217,7 +217,7 @@ export default function HomePage() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#f5b731]/20 to-[#c8102e]/20 rounded-3xl blur-2xl" />
               <div className="relative rounded-2xl overflow-hidden border border-white/10">
                 <Image
-                  src="/photos/family.jpg"
+                  src="/photos/family.webp"
                   alt="Daniel Gabriel with his family"
                   width={700}
                   height={500}
@@ -323,7 +323,7 @@ export default function HomePage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/photos/energy.jpg"
+                src="/photos/energy.webp"
                 alt="Waste to energy system diagram"
                 width={700}
                 height={450}
@@ -351,7 +351,7 @@ export default function HomePage() {
             {/* Baseball photo */}
             <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
               <Image
-                src="/photos/community.jpg"
+                src="/photos/community.webp"
                 alt="Daniel coaching youth baseball"
                 width={700}
                 height={500}
@@ -367,7 +367,7 @@ export default function HomePage() {
             {/* House / community investment */}
             <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
               <Image
-                src="/photos/community2.jpg"
+                src="/photos/community2.webp"
                 alt="Hawaii community"
                 width={700}
                 height={500}
